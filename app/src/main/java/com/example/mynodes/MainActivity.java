@@ -16,4 +16,8 @@ public class MainActivity extends AppCompatActivity {
         CustomDialogFragment fragment = new CustomDialogFragment();
         fragment.show(getSupportFragmentManager(), "custom");
     }
+    public void showMySave(View v){
+        CustomSave fragment = new CustomSave();
+        fragment.show(getSupportFragmentManager(), "custom");
+    }
 }
