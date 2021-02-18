@@ -1,26 +1,24 @@
 package com.example.mynodes.ClassJava;
 
-import com.example.mynodes.ClassJava.User;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class UserResourceParser {
-    private ArrayList<User> users;
-    public UserResourceParser(){
-        users = new ArrayList<>();
+public class NodeResourceParser {
+    private ArrayList<Node> nodes;
+    public NodeResourceParser(){
+        nodes = new ArrayList<>();
     }
 
-    public ArrayList<User> getUsers() {
-        return users;
+    public ArrayList<Node> getNodes() {
+        return nodes;
     }
 
     public boolean parse(XmlPullParser xpp){
         boolean status = true;
-        User currentUser = null;
+        Node currentNode = null;
         boolean inEntity = false;
         String textValue = "";
 
@@ -31,9 +29,9 @@ public class UserResourceParser {
                 String tagName= xpp.getName();
                 switch (eventType){
                     case XmlPullParser.START_TAG:{
-                        if("user".equalsIgnoreCase(tagName)){
+                        if("node".equalsIgnoreCase(tagName)){
                             inEntity = true;
-                            currentUser = new User();
+                            currentNode = new Node();
                         }
                         break;
                     }
@@ -43,13 +41,13 @@ public class UserResourceParser {
                     }
                     case XmlPullParser.END_TAG:{
                         if(inEntity) {
-                            if ("user".equalsIgnoreCase(tagName)) {
+                            if ("node".equalsIgnoreCase(tagName)) {
                                 inEntity = false;
-                                users.add(currentUser);
-                            } else if ("name".equalsIgnoreCase(tagName)) {
-                                currentUser.setName(textValue);
-                            } else if ("age".equalsIgnoreCase(tagName)) {
-                                currentUser.setAge(textValue);
+                                nodes.add(currentNode);
+                            } else if ("title".equalsIgnoreCase(tagName)) {
+                                currentNode.setTitle(textValue);
+                            } else if ("body".equalsIgnoreCase(tagName)) {
+                                currentNode.setBody(textValue);
                             }
                         }
                         break;

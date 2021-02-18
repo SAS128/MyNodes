@@ -7,8 +7,8 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.mynodes.ClassJava.User;
-import com.example.mynodes.ClassJava.UserResourceParser;
+import com.example.mynodes.ClassJava.Node;
+import com.example.mynodes.ClassJava.NodeResourceParser;
 import com.example.mynodes.R;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -19,16 +19,16 @@ public class LayoutMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout_main);
-        ListView v = (ListView)findViewById(R.id.useritems);
+        ListView v = (ListView)findViewById(R.id.nodeitems);
 
-        XmlPullParser xpp = getResources().getXml(R.xml.users);
-        UserResourceParser parser = new UserResourceParser();
+        XmlPullParser xpp = getResources().getXml(R.xml.nodes);
+        NodeResourceParser parser = new NodeResourceParser();
         if(parser.parse(xpp)){
-            for(User user : parser.getUsers()) {
-                Log.d("XML", user.toString());
+            for(Node node : parser.getNodes()) {
+                Log.d("XML", node.toString());
             }
 
-            ArrayAdapter<User> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, parser.getUsers());
+            ArrayAdapter<Node> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, parser.getNodes());
             v.setAdapter(adapter);
         }
     }

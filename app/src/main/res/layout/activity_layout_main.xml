@@ -23,7 +23,7 @@
                 android:orientation="vertical">
 
                 <ListView
-                    android:id="@+id/useritems"
+                    android:id="@+id/nodeitems"
                     android:layout_width="match_parent"
                     android:layout_height="518dp" />
             </LinearLayout>

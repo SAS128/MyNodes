@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes xmlns:android="http://schemas.android.com/apk/res/android">
+    <node>
+        <title>Заметка 1</title>
+        <body>Тестим 1</body>
+    </node>
+    <node>
+        <title>Заметка 2</title>
+        <body>Тестим 1</body>
+    </node>
+    <node>
+        <title>Заметка 3</title>
+        <body>Тестим 1</body>
+    </node>
+</nodes>
