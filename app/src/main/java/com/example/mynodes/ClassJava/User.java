@@ -1,4 +1,4 @@
-package com.example.mynodes;
+package com.example.mynodes.ClassJava;
 
 public class User{
     private String name;

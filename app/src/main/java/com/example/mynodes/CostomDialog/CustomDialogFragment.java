@@ -1,4 +1,4 @@
-package com.example.mynodes;
+package com.example.mynodes.CostomDialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
+
+import com.example.mynodes.R;
 
 import java.util.Date;
 import java.util.Calendar;

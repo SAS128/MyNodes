@@ -1,4 +1,4 @@
-package com.example.mynodes;
+package com.example.mynodes.XMLWindow;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.mynodes.R;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

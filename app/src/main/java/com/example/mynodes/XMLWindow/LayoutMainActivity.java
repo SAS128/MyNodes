@@ -1,19 +1,24 @@
-package com.example.mynodes;
+package com.example.mynodes.XMLWindow;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.mynodes.ClassJava.User;
+import com.example.mynodes.ClassJava.UserResourceParser;
+import com.example.mynodes.R;
 
 import org.xmlpull.v1.XmlPullParser;
 
-public class LayoutMain extends AppCompatActivity {
+public class LayoutMainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_layout);
+        setContentView(R.layout.activity_layout_main);
         ListView v = (ListView)findViewById(R.id.useritems);
 
         XmlPullParser xpp = getResources().getXml(R.xml.users);

@@ -1,6 +1,6 @@
-package com.example.mynodes;
+package com.example.mynodes.ClassJava;
 
-import android.util.Log;
+import com.example.mynodes.ClassJava.User;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

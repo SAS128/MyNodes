@@ -1,15 +1,14 @@
-package com.example.mynodes;
+package com.example.mynodes.XMLWindow;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
-import org.xmlpull.v1.XmlPullParser;
+import com.example.mynodes.CostomDialog.CustomDialogFragment;
+import com.example.mynodes.CostomDialog.CustomSave;
+import com.example.mynodes.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,13 +34,11 @@ public class MainActivity extends AppCompatActivity {
         fragment.show(getSupportFragmentManager(), "custom");
     }
     public void showMySave(View v){
-        Intent intent = new Intent(this, LayoutMain.class);
-        startActivity(intent);
         CustomSave fragment = new CustomSave();
         fragment.show(getSupportFragmentManager(), "custom");
     }
     public void NEwLayoutMain(View v){
-        Intent intent = new Intent(this, LayoutMain.class);
+        Intent intent = new Intent(this, LayoutMainActivity.class);
         startActivity(intent);
     }
     public void OpenSQL(View v){
