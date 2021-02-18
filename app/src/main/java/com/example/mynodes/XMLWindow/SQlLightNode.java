@@ -2,24 +2,13 @@ package com.example.mynodes.XMLWindow;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.mynodes.R;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class SQlLightNode extends AppCompatActivity {
 
@@ -36,7 +25,7 @@ public class SQlLightNode extends AppCompatActivity {
         db.execSQL("INSERT INTO users VALUES('Met', 20)");
 
         Cursor cursor = db.rawQuery("SELECT * FROM users", null);
-        TextView textView = (TextView)findViewById(R.id.textView);
+        TextView textView = (TextView)findViewById(R.id.SQL_textView);
         while (cursor.moveToNext()){
             textView.append("\nName\t"+ cursor.getString(0) + " Age\t" + cursor.getInt(1));
         }
