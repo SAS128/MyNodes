@@ -44,4 +44,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LayoutMain.class);
         startActivity(intent);
     }
+    public void OpenSQL(View v){
+        Intent intent = new Intent(this, SQlLightNode.class);
+        startActivity(intent);
+    }
 }
